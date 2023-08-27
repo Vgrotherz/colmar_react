@@ -1,0 +1,76 @@
+.first {
+    display: flex;
+    align-items: center;
+    background-color: rgb(223, 219, 219);
+}
+
+.images {
+    max-width: 60%;
+}
+
+.marginall {
+    margin: 32px 24px;
+}
+
+.marginup {
+    margin-top: 32px;
+}
+
+.second img {
+    max-width: 100%;
+}
+
+.one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 26%;
+    line-height: 1.2;
+    margin-left: 24px;
+}
+
+.text-block {
+    font-size: 1.5rem;
+}
+
+.text-block h1, .four h2 {
+    margin-bottom: 32px;
+    
+}
+
+.text-block p {
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.button {
+    background-color: gray;
+    line-height: 1.5;
+}
+
+.button p {
+    text-align: center;
+    padding: 8px;
+    color: white;
+    font-weight: normal;
+}
+
+.button p {
+    margin: 0;
+
+}
+
+@media only screen and (max-width: 801px) {
+
+    .images {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .one {
+        max-width: 100%;
+        margin: 32px 16px;
+
+    }
+
+}

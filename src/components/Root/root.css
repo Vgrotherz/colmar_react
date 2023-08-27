@@ -1,0 +1,16 @@
+.body {
+    font-family: "Avenir next", sans-serif ;
+    background-color: white;
+    color: rgb(71, 70, 70);
+    border: 0.1mm solid gray;
+}
+
+.special {
+    display: flex;
+}
+
+@media only screen and (max-width:801px) {
+    .special {
+        flex-direction: column;
+    }
+}

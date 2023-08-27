@@ -1,0 +1,18 @@
+.footer {
+    border-top: 0.1mm solid rgb(204, 200, 200);
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    margin: 16px 24px;
+}
+
+.foot li {
+    display: inline-flex;
+}
+
+.list span {
+    margin-left: 8px;
+}

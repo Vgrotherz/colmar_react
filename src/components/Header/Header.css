@@ -1,0 +1,65 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.logo-name img {
+    width: 40px;
+}
+
+.logo-name p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo-name span {
+    color: rgb(155, 152, 152);
+}
+
+.navigation {
+    margin-right: 24px;
+}
+
+
+.list span {
+    margin-left: 8px;
+}
+
+.navigation  li {
+    display: inline-flex;
+    font-size: 1.25rem;
+}
+
+
+@media only screen and (min-width:701px) {
+    .mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:700px)  {
+
+    /* hiding desktop elements */
+
+    .desktop {
+        display: none;   
+    }
+
+    /* logo and nav */
+
+    .logo-name {
+        display: contents;
+    }
+
+    .logo-name img {
+        margin: 0 24px;
+    }
+}
