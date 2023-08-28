@@ -1,5 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+
 import './Header.css';
+
 import logoAcademy from '../capstone_colmar_assets/images/ic-logo.svg';
 import logoAcademyMob from '../capstone_colmar_assets/images/ic-on-campus.svg';
 import logoOnlineMob from '../capstone_colmar_assets/images/ic-online.svg';
@@ -10,8 +14,10 @@ const Header = () => {
     return (
         <div className="header">
             <div className="logo-name">
-                <img src={logoAcademy} alt="Logo of an Academy" />
-                <p className="desktop">COLMAR<span>ACADEMY</span></p>
+                <Link to='/' className="link">
+                    <img src={logoAcademy} alt="Logo of an Academy" />
+                    <p className="desktop">COLMAR<span>ACADEMY</span></p>
+                </Link>
                 <img  className="mobile" src={logoAcademyMob} alt="campus logo" />
                 <img  className="mobile" src={logoOnlineMob} alt="online" />
                 <img className="mobile" src={logoLogin} alt="login" />         

@@ -1,0 +1,29 @@
+.second {
+    border-top: 0.1mm solid gray;
+}
+
+.three-pictures {
+    width: 100%;
+}
+
+.small-picture {
+    flex-direction: column;
+    border: 0;
+}
+
+.small-picture img {
+    max-width: 100%;
+}
+
+.small-blocktext {
+    margin-left: 16px;
+}
+
+.three {
+    background-color: transparent;
+    border-bottom: 0.1mm solid rgb(204, 200, 200);
+}
+
+.three a {
+    margin-bottom: 32px;
+}

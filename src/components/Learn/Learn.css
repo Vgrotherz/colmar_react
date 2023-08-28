@@ -1,0 +1,107 @@
+.special_two {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.third {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(223, 219, 219);
+}
+
+.text-low {
+    margin-bottom: 32px;
+}
+
+.block-three h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 6.5vmin;
+}
+
+.six-pics {
+    /* margin: 0 72px 32px 72px; */
+}
+
+.midpic-line {
+    display: flex;
+}
+
+.midpic {
+    background-color: white;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.midpic-slave {
+    display: flex;
+    /* margin: 27px; был только это параметр */
+    flex-direction: column;
+    margin: 32px;
+}
+
+.midpic img {
+    width: 100%;
+    height: auto;
+}
+
+.midpic-text {
+    margin: 16px 16px 50px 16px;
+    font-size: 2.5vmin;
+}
+
+.midpic-text-p {
+    margin: 8px 0px;
+}
+
+
+@media only screen and (max-width: 801px) {
+
+    
+}
+
+
+@media only screen and (max-width:701px ) {
+    .midpic-text {
+        font-size: 1.9vmin;
+    }
+
+}
+
+@media only screen and (max-width:480px)  {
+    .third {
+        display: block;
+        background-color: transparent;
+        border-bottom: 0.1mm solid rgb(204, 200, 200);
+        padding-bottom: 32px;
+    }
+
+    .six-pics {
+        margin: 16px 16px;
+    }
+
+    .midpic {
+        background-color: rgb(223, 219, 219);
+        margin: 0 0 8px 0;
+    }
+
+    .midpic-line {
+        flex-direction: column;
+    }
+
+    .midpic-slave {
+        margin-left: 0;
+    }
+
+    .block-three h1 {
+        font-size: 11vmin;
+    }
+
+    .midpic-text {
+        font-size: inherit;
+    }
+
+}
