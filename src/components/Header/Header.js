@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 import './Header.css';
@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="logo-name">
-                <Link to='/' className="link">
+                <Link to='/' className="link logo_academy">
                     <img src={logoAcademy} alt="Logo of an Academy" />
                     <p className="desktop">COLMAR<span>ACADEMY</span></p>
                 </Link>
@@ -24,10 +24,24 @@ const Header = () => {
             </div>
             <div className="navigation desktop">
                 <ul className="list">
-                    <li>On campus</li>
-                    <li><span>Online</span></li>
-                    <li><span>For companies</span></li>
-                    <li><span>Sign in</span></li>
+                    <li>
+                        <NavLink to='/info' 
+                        className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink' } >
+                            On campus
+                        </NavLink></li>
+                    <li><span>
+                        <NavLink to='/learn' 
+                        className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink' } >
+                            Online
+                        </NavLink></span></li>
+                    <li><span>
+                        <NavLink to='/' className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink'} >
+                            For companies
+                        </NavLink></span></li>
+                    <li><span>
+                        <NavLink to='/404' className='inactiveNavLink' >
+                        Sign in
+                        </NavLink></span></li>
                 </ul>
             </div>
         </div>

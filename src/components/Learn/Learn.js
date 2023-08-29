@@ -16,7 +16,7 @@ const Learn = () => {
             <div className="block-three">
                 <h1 className="marginup">Start learning</h1>
                 <div className="six-pics">
-                    <NavLink to='/info' className="special_two">
+                    <NavLink to='/' className="special_two">
                         <div className="midpic-line">                           
                                 <div className="midpic midpic-slave">
                                     <img className="desktop" src={courseSoftware} alt="soft course" />

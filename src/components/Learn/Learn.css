@@ -22,9 +22,6 @@
     font-size: 6.5vmin;
 }
 
-.six-pics {
-    /* margin: 0 72px 32px 72px; */
-}
 
 .midpic-line {
     display: flex;
@@ -38,9 +35,8 @@
 
 .midpic-slave {
     display: flex;
-    /* margin: 27px; был только это параметр */
     flex-direction: column;
-    margin: 32px;
+    margin: 27px;
 }
 
 .midpic img {
@@ -58,20 +54,19 @@
 }
 
 
-@media only screen and (max-width: 801px) {
-
-    
-}
-
-
 @media only screen and (max-width:701px ) {
     .midpic-text {
-        font-size: 1.9vmin;
+        font-size: 2.6vmin;
+        margin: 16px 10px 39px 10px;
+    }
+
+    .midpic-slave {
+        margin: 15px;
     }
 
 }
 
-@media only screen and (max-width:480px)  {
+@media only screen and (max-width:550px)  {
     .third {
         display: block;
         background-color: transparent;

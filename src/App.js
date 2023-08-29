@@ -7,6 +7,7 @@ import Root from './components/Root/Root';
 import StartHere from './components/StartHere/StartHere';
 import Learn from './components/Learn/Learn';
 import Info from './components/Info/Info';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -14,7 +15,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route index element={ <StartHere /> } />
     <Route path='/learn' element={ <Learn /> } />
     <Route path='/info' element={ <Info /> } />
-
+    <Route path='/404' element={ <ErrorPage /> } />
   </Route>
 ));
 

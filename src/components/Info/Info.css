@@ -1,29 +1,100 @@
+
 .second {
+    display: flex;
     border-top: 0.1mm solid gray;
 }
 
 .three-pictures {
-    width: 100%;
+    width: inherit;
+    border-left: 0.1mm solid rgb(204, 200, 200);
+    text-decoration: none;
+    color: inherit;
 }
 
 .small-picture {
-    flex-direction: column;
-    border: 0;
-}
-
-.small-picture img {
-    max-width: 100%;
-}
-
-.small-blocktext {
-    margin-left: 16px;
-}
-
-.three {
-    background-color: transparent;
+    display: flex;
     border-bottom: 0.1mm solid rgb(204, 200, 200);
 }
 
-.three a {
-    margin-bottom: 32px;
+.small-picture img {
+    margin: 16px;
+    max-width: 35%;
+    height: fit-content;
+}
+
+#small-picture-one {
+    margin-top: 32px;
+}
+
+.three {
+    background-color: rgb(223, 219, 219);
+}
+
+.small-blocktext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.6vmin;
+
+}
+
+.small-blocktext h1, .small-blocktext p {
+    margin-bottom: 8px;
+}
+
+.link_a {
+    color: rgb(52, 141, 214);
+    text-decoration: none;
+}
+
+.text-big {
+    font-size: 1.9rem;
+    color: rgb(53, 53, 53);
+}
+
+.text-hurt h1, .four h2 {
+    margin: 32px 0 24px 0;
+}
+
+.text-hurt p {
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 801px) {
+    .text-hurt, .text-low {
+        margin: 0 24px;
+    }
+
+    .small-blocktext {
+        font-size: inherit;
+    }
+}
+
+
+@media only screen and (max-width: 701px) {
+    .three-pictures {
+        width: 100%;
+    }
+
+    .small-picture {
+        flex-direction: column;
+        border: 0;
+    }
+
+    .small-picture img {
+        max-width: 100%;
+    }
+
+    .small-blocktext {
+        margin-left: 16px;
+    }
+
+    .three {
+        background-color: transparent;
+        border-bottom: 0.1mm solid rgb(204, 200, 200);
+    }
+
+    .three a {
+        margin-bottom: 32px;
+    }
 }

@@ -5,6 +5,15 @@
     height: 64px;
 }
 
+.activeNavLink {
+    color: rgb(76, 135, 212);
+}
+
+.inactiveNavLink {
+    color: inherit;
+    text-decoration: none;
+}
+
 .logo-name {
     display: flex;
     align-items: center;
@@ -12,10 +21,15 @@
 }
 
 .link {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     text-decoration: none;
     color: inherit;
+}
+
+.logo_academy {
+    display: flex;
+    align-items: center;
 }
 
 .logo-name img, .link img {
@@ -46,14 +60,47 @@
     font-size: 1.25rem;
 }
 
+@media only screen and (min-width:427px) and  (max-width: 701px) {
+    .header {
+        flex-direction: column;
+        height: 125px;
+        justify-content: center;
+        border-bottom: 0.1mm solid gray;
+    }
+    .logo-name {
+        margin-left: 0;
+    }
+    
+}
 
-@media only screen and (min-width:701px) {
+@media only screen and (min-width:427px) {
     .mobile {
         display: none;
     }
+
 }
 
-@media only screen and (max-width:700px)  {
+@media only screen and (max-width:426px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .logo-name {
+        display: contents;
+    }
+
+    .logo-name img {
+        margin: 0 ;
+    }
+
+    .header {
+        margin: 0 10px;
+    }
+}
+
+
+@media only screen and (max-width:375px)  {
 
     /* hiding desktop elements */
 
@@ -68,7 +115,7 @@
     }
 
     .logo-name img {
-        margin: 0 24px;
+        margin: 0 ;
     }
 
 }
