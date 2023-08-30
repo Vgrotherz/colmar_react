@@ -16,3 +16,10 @@
 .list span {
     margin-left: 8px;
 }
+
+@media only screen and (max-width:425px) {
+    .footer {
+        border: 0;
+    }
+
+}

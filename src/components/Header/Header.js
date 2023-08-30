@@ -18,9 +18,15 @@ const Header = () => {
                     <img src={logoAcademy} alt="Logo of an Academy" />
                     <p className="desktop">COLMAR<span>ACADEMY</span></p>
                 </Link>
-                <img  className="mobile" src={logoAcademyMob} alt="campus logo" />
-                <img  className="mobile" src={logoOnlineMob} alt="online" />
-                <img className="mobile" src={logoLogin} alt="login" />         
+                <Link>
+                    <img  className="mobile" src={logoAcademyMob} alt="campus logo" />
+                </Link>
+                <Link>
+                    <img  className="mobile" src={logoOnlineMob} alt="online" />
+                </Link>
+                <Link to='/404'>
+                    <img className="mobile" src={logoLogin} alt="login" />   
+                </Link>      
             </div>
             <div className="navigation desktop">
                 <ul className="list">
@@ -35,7 +41,7 @@ const Header = () => {
                             Online
                         </NavLink></span></li>
                     <li><span>
-                        <NavLink to='/' className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink'} >
+                        <NavLink to='/contacts' className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink'} >
                             For companies
                         </NavLink></span></li>
                     <li><span>

@@ -1,0 +1,64 @@
+.four {
+    display: flex;
+    background-color: white;
+    border-top: 0.1mm solid rgb(204, 200, 200);
+}
+
+.text-center {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.four video {
+    max-width: 100%;
+}
+
+.special {
+    display: flex;
+}
+
+.vid {
+    max-width: 60%;
+}
+
+.two-pictures {
+    margin-top: 32px;
+    width: 40%;
+}
+
+.two-pictures .small-picture {
+    border: none;
+}
+
+@media only screen and (min-width:426px) and (max-width:801px) {
+    .vid {
+        max-width: inherit;
+    }
+
+    .two-pictures {
+        width: inherit;
+    }
+    
+}
+
+@media only screen and (max-width:480px) {
+
+    .four {
+        margin-bottom: 24px;
+    }
+
+    .four .marginall {
+        margin: 0;
+    }
+
+    .four .text-center {
+        margin-bottom: 16px;
+    }
+
+    .vid {
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+
+}

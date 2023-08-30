@@ -9,8 +9,8 @@ import './StartHere.css';
 const StartHere = () => {
     return (
         <>
-            <div class="first">
-                <div class="special">     
+            <div className="first">
+                <div className="special">     
                     <img className="images marginall" src={ banner } alt="banner" />
                     <div className="text-block one">
                         <h1>Learn something new everyday</h1>

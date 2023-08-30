@@ -1,11 +1,9 @@
 .first {
-    display: flex;
-    align-items: center;
     background-color: rgb(223, 219, 219);
 }
 
 .images {
-    max-width: 60%;
+    max-width: 52%;
 }
 
 .marginall {
@@ -14,10 +12,6 @@
 
 .marginup {
     margin-top: 32px;
-}
-
-.second img {
-    max-width: 100%;
 }
 
 .one {
@@ -58,6 +52,13 @@
 
 .button p {
     margin: 0;
+
+}
+
+@media only screen and (min-width: 802px) and (max-width:1024px) {
+    .text-block {
+        font-size: 2vmin;
+    }
 
 }
 

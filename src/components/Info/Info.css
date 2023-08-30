@@ -1,11 +1,15 @@
 
 .second {
     display: flex;
-    border-top: 0.1mm solid gray;
+    border-top: 0.1mm solid rgb(204, 200, 200);
+}
+
+.second img {
+    max-width: 100%;
 }
 
 .three-pictures {
-    width: inherit;
+    width: 35%;
     border-left: 0.1mm solid rgb(204, 200, 200);
     text-decoration: none;
     color: inherit;
@@ -67,6 +71,10 @@
 
     .small-blocktext {
         font-size: inherit;
+    }
+
+    .three-pictures {
+        width: 100%;
     }
 }
 

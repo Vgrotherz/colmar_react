@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(223, 219, 219);
+    border-top: 0.1mm solid rgb(204, 200, 200);
 }
 
 .text-low {
