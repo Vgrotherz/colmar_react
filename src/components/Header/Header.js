@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 
 import './Header.css';
+import './Reset.css';
 
 import logoAcademy from '../capstone_colmar_assets/images/ic-logo.svg';
 import logoAcademyMob from '../capstone_colmar_assets/images/ic-on-campus.svg';
