@@ -19,7 +19,7 @@ const StartHere = () => {
                             {/* <NavLink to='/info' className="button">
                                 <p>Start here</p>
                             </NavLink> */}
-                            <NavLink to='/info' className="wrp">
+                            <NavLink to='/info' className="wrp link">
                                 <button class="bttn">Submit</button>
                             </NavLink>
                     </div>
