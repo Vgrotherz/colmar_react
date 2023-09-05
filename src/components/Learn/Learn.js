@@ -18,7 +18,7 @@ const Learn = () => {
                 <div className="six-pics">
                     <NavLink to='/contacts' className="special_two">
                         <div className="midpic-line">                           
-                                <div className="midpic midpic-slave">
+                                <div className="midpic midpic-slave box box1">
                                     <img className="desktop" src={courseSoftware} alt="soft course" />
                                     <div className="midpic-text">    
                                         <h2>Software engineering</h2>
@@ -26,7 +26,8 @@ const Learn = () => {
                                         <p className="desktop" >Web Development, Mobile Development, iOT, APIs</p>
                                     </div>
                                 </div>
-                                <div className="midpic midpic-slave">
+                                <div className="bg"></div>
+                                <div className="midpic midpic-slave box box2">
                                     <img className="desktop" src={courseComputer} alt="comp art" />
                                     <div className="midpic-text">    
                                         <h2>Computer art</h2>
@@ -34,7 +35,8 @@ const Learn = () => {
                                         <p className="desktop" >Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
                                     </div>
                                 </div>
-                                <div className="midpic midpic-slave">
+                                <div className="bg"></div>
+                                <div className="midpic midpic-slave box box3">
                                     <img className="desktop" src={courseDesign} alt="design course" />
                                     <div className="midpic-text">    
                                         <h2>Design</h2>
@@ -42,9 +44,10 @@ const Learn = () => {
                                         <p className="desktop" >User Experience Design, User Research, Visual Design</p>
                                     </div>
                                 </div>
+                                <div className="bg"></div>
                         </div>
                         <div className="midpic-line">                           
-                            <div className="midpic midpic-slave">
+                            <div className="midpic midpic-slave box box1">
                                 <img className="desktop" src={courseData} alt="data course" />
                                 <div className="midpic-text">    
                                     <h2>Data</h2>
@@ -52,7 +55,8 @@ const Learn = () => {
                                     <p className="desktop" >Data Science, Big Date, SQL, Data Visualiation</p>
                                 </div>
                             </div>
-                            <div className="midpic midpic-slave">
+                            <div className="bg"></div>
+                            <div className="midpic midpic-slave box box2">
                                 <img className="desktop" src={courseBusiness} alt="business course" />
                                 <div className="midpic-text">    
                                     <h2>Business</h2>
@@ -60,7 +64,8 @@ const Learn = () => {
                                     <p className="desktop" >Product Development, Business Development, Startup</p>
                                 </div>
                             </div>
-                            <div className="midpic midpic-slave">
+                            <div className="bg"></div>
+                            <div className="midpic midpic-slave box box3">
                                 <img className="desktop" src={courseMarketing} alt="marketing course" />
                                 <div className="midpic-text">    
                                     <h2>Marketing</h2>
@@ -68,6 +73,7 @@ const Learn = () => {
                                     <p className="desktop">Analytics, Content Marketing, Mobile marketing</p>
                                 </div>
                             </div>
+                            <div className="bg"></div>
                         </div>
                     </NavLink>
                 </div>

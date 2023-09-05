@@ -42,7 +42,7 @@ const Header = () => {
                         </NavLink></span></li>
                     <li><span>
                         <NavLink to='/contacts' className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink'} >
-                            For companies
+                            Contacts
                         </NavLink></span></li>
                     <li><span>
                         <NavLink to='/404' className='inactiveNavLink' >

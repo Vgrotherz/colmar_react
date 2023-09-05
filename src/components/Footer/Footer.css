@@ -1,5 +1,9 @@
 .footer {
+    position: relative;
+    background-color: inherit;
+    z-index: 2;
     border-top: 0.1mm solid rgb(204, 200, 200);
+    padding-bottom: 0.1rem;
 }
 
 .foot {

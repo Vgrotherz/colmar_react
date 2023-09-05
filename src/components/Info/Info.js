@@ -32,7 +32,7 @@ const Info = () => {
                     {/* <!-- 3 pics aside--> */}
                     <div className="three-pictures">
                         <Link to='/learn' className="small-picture">
-                            <img id="small-picture-one" className="desktop" src={infoOrientation} alt="info" />
+                            <img id="small-picture-one" className="desktop learn_img" src={infoOrientation} alt="info" />
                             <img className="mobile" src={infoOrientationMob} alt="info" />
                             <div className="small-blocktext">
                                 <h1>Orientation date</h1>
@@ -41,7 +41,7 @@ const Info = () => {
                             </div>
                         </Link>
                         <Link to='/learn' className="small-picture">
-                            <img className="desktop" src={infoCampus} alt="campus" />
+                            <img className="desktop learn_img" src={infoCampus} alt="campus" />
                             <img className="mobile" src={infoCampusMob} alt="campus" />
                             <div className="small-blocktext">
                                 <h1>Our campus</h1>
@@ -50,7 +50,7 @@ const Info = () => {
                             </div>
                         </Link>
                         <Link to='/learn' className="small-picture three">
-                            <img className="desktop" src={infoGuest} alt="guest" />
+                            <img className="desktop learn_img" src={infoGuest} alt="guest" />
                             <img className="mobile" src={infoGuestMob} alt="guest" />
                             <div className="small-blocktext">
                                 <h1>Our guest lecture</h1>
