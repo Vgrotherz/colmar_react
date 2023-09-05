@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import LinkInfo from "./LinkInfo";
+
 import infoMain from "../capstone_colmar_assets/images/information-main.jpg";
 import infoOrientation from "../capstone_colmar_assets/images/information-orientation.jpg";
 import infoOrientationMob from "../capstone_colmar_assets/images/information-orientation-mobile.jpg";
@@ -28,35 +30,35 @@ const Info = () => {
                             </div>
                         </div>
                     {/* <!-- 3 pics aside--> */}
-                    <Link to='/learn' className="three-pictures">
-                        <div className="small-picture">
+                    <div className="three-pictures">
+                        <Link to='/learn' className="small-picture">
                             <img id="small-picture-one" className="desktop" src={infoOrientation} alt="info" />
                             <img className="mobile" src={infoOrientationMob} alt="info" />
                             <div className="small-blocktext">
                                 <h1>Orientation date</h1>
                                 <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
-                                <Link to="/learn" className="link_a">Read more</Link>
+                                <LinkInfo />
                             </div>
-                        </div>
-                        <div className="small-picture">
+                        </Link>
+                        <Link to='/learn' className="small-picture">
                             <img className="desktop" src={infoCampus} alt="campus" />
                             <img className="mobile" src={infoCampusMob} alt="campus" />
                             <div className="small-blocktext">
                                 <h1>Our campus</h1>
                                 <p>Find which campus is close by you</p>
-                                <Link to="/learn" className="link_a">Read more</Link>
+                                <LinkInfo />
                             </div>
-                        </div>
-                        <div className="small-picture three">
+                        </Link>
+                        <Link to='/learn' className="small-picture three">
                             <img className="desktop" src={infoGuest} alt="guest" />
                             <img className="mobile" src={infoGuestMob} alt="guest" />
                             <div className="small-blocktext">
                                 <h1>Our guest lecture</h1>
-                                <p>Join a keynote with Oliver Sack about music in medical treatment</p>
-                                <Link to="/learn" className="link_a">Read more</Link>
+                                <p>Join a keynote with Oliver Sack about<br></br> music in medical treatment</p>
+                                <LinkInfo />
                             </div>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                 </div>              
             </div>
     ) ;

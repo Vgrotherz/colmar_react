@@ -11,13 +11,14 @@
 .three-pictures {
     width: 35%;
     border-left: 0.1mm solid rgb(204, 200, 200);
-    text-decoration: none;
-    color: inherit;
 }
 
 .small-picture {
     display: flex;
     border-bottom: 0.1mm solid rgb(204, 200, 200);
+    text-decoration: none;
+    color: inherit;
+    
 }
 
 .small-picture img {
@@ -49,6 +50,27 @@
 .link_a {
     color: rgb(52, 141, 214);
     text-decoration: none;
+    padding-bottom: 10px;
+    background:
+      linear-gradient(
+        to right,
+        rgba(100, 200, 200, 1),
+        rgba(100, 200, 200, 1)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.link_a:hover {
+    background-size: 0 3px, 100% 3px;
 }
 
 .text-big {
@@ -106,3 +128,95 @@
         margin-bottom: 32px;
     }
 }
+
+.lnk {
+    height: 30px;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  /* Hide extra text */
+  .mask {
+    position: relative;
+    padding: 0;
+    height: 20px;
+  
+    /*  Remove overflow to see how it works　:) */
+    overflow: hidden;
+  }
+  
+  .lnk-container {
+    transition: transform 0.4s ease;
+  }
+  
+  .title {
+    display: block;
+  
+    /*  Set same font-size and line height  */
+    font-size: 20px;
+    line-height: 20px;
+  
+    transition: transform 0.4s ease;
+  }
+  
+  .lnk-title1 {
+    transform-origin: right center;
+  }
+  
+  .lnk-title2 {
+    transform-origin: left center;
+    transform: rotate(20deg);
+  }
+  
+  .lnk-icon {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: #f8f8ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+  
+    /*  Remove overflow to see how it works　:) */
+    overflow: hidden;
+  }
+  
+  .icn {
+    display: block;
+    position: absolute;
+    transition: transform 0.4s ease;
+  }
+  
+  .icn:nth-child(2) {
+    transform: translate(-40px);
+  }
+  
+  /* Hover Action*/
+  
+  /* Move up two texts (20px = font-size) */
+  .lnk:hover .lnk-container {
+    transform: translateY(-20px);
+  }
+  
+  /* Rotate texts a little bit */
+  .lnk:hover .lnk-title1 {
+    transform: rotate(20deg);
+  }
+  
+  .lnk:hover .lnk-title2 {
+    transform: rotate(0);
+  }
+  
+  /* Move arrows to right */
+  .lnk:hover .icn:first-child {
+    transform: translate(40px);
+  }
+  
+  .lnk:hover .icn:nth-child(2) {
+    transform: translate(0px);
+  }
+  

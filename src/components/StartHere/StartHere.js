@@ -10,7 +10,7 @@ const StartHere = () => {
     return (
         <>
             <div className="first">
-                <div className="special">     
+                <div className="special">    
                     <img className="images marginall" src={ banner } alt="banner" />
                     <div className="text-block one">
                         <h1>Learn something new everyday</h1>
@@ -20,7 +20,7 @@ const StartHere = () => {
                                 <p>Start here</p>
                             </NavLink> */}
                             <NavLink to='/info' className="wrp link">
-                                <button class="bttn">Submit</button>
+                                <button class="bttn">Start here</button>
                             </NavLink>
                     </div>
                 </div> 
