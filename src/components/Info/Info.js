@@ -20,7 +20,7 @@ const Info = () => {
         <div className="second">
                 <div className="special">
                     <div className="images marginall desktop">
-                        <img src={infoMain} alt="Main info" />
+                        <img src={infoMain} className="opacity_hover" alt="Main info" />
                             <div className="text-block text-hurt">
                                 <h1>It doesn't hurt to keep practicing</h1>
                                 <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula"</p>
@@ -31,8 +31,8 @@ const Info = () => {
                         </div>
                     {/* <!-- 3 pics aside--> */}
                     <div className="three-pictures">
-                        <Link to='/learn' className="small-picture">
-                            <img id="small-picture-one" className="desktop learn_img" src={infoOrientation} alt="info" />
+                        <Link to='/learn' className="small-picture photo">
+                            <img id="small-picture-one" className="desktop glow_img" src={infoOrientation} alt="info" />
                             <img className="mobile" src={infoOrientationMob} alt="info" />
                             <div className="small-blocktext">
                                 <h1>Orientation date</h1>
@@ -40,8 +40,8 @@ const Info = () => {
                                 <LinkInfo />
                             </div>
                         </Link>
-                        <Link to='/learn' className="small-picture">
-                            <img className="desktop learn_img" src={infoCampus} alt="campus" />
+                        <Link to='/learn' className="small-picture photo">
+                            <img className="desktop glow_img" src={infoCampus} alt="campus" />
                             <img className="mobile" src={infoCampusMob} alt="campus" />
                             <div className="small-blocktext">
                                 <h1>Our campus</h1>
@@ -49,8 +49,8 @@ const Info = () => {
                                 <LinkInfo />
                             </div>
                         </Link>
-                        <Link to='/learn' className="small-picture three">
-                            <img className="desktop learn_img" src={infoGuest} alt="guest" />
+                        <Link to='/learn' className="small-picture three photo">
+                            <img className="desktop glow_img" src={infoGuest} alt="guest" />
                             <img className="mobile" src={infoGuestMob} alt="guest" />
                             <div className="small-blocktext">
                                 <h1>Our guest lecture</h1>

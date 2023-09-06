@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './Learn.css'
 
@@ -11,6 +11,16 @@ import courseMarketing from "../capstone_colmar_assets/images/course-marketing.j
 
 
 const Learn = () => {
+    // const [isHovered, setIsHovered] = useState(false);
+
+    // const handleMouseEnter = () => {
+    //     setIsHovered(true);
+    // };
+
+    // const handleMouseLeave = () => {
+    //     setIsHovered(false);
+    // };
+
     return (
         <div className="third">
             <div className="block-three">

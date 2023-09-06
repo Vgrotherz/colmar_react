@@ -1,3 +1,27 @@
+.link_a {
+  text-decoration: none;
+  padding-bottom: 10px;
+  background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.link_a:hover {
+  background-size: 0 3px, 100% 3px;
+}
 
 .lnk {
     height: 30px;
@@ -12,8 +36,6 @@
     position: relative;
     padding: 0;
     height: 20px;
-  
-    /*  Remove overflow to see how it works　:) */
     overflow: hidden;
   }
   
@@ -22,12 +44,10 @@
   }
   
   .title {
+    color: rgb(52, 141, 214);
     display: block;
-  
-    /*  Set same font-size and line height  */
     font-size: 20px;
     line-height: 20px;
-  
     transition: transform 0.4s ease;
   }
   
@@ -50,8 +70,6 @@
     justify-content: center;
     align-items: center;
     margin-left: 10px;
-  
-    /*  Remove overflow to see how it works　:) */
     overflow: hidden;
   }
   
