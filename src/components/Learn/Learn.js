@@ -1,25 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import './Learn.css'
 
-import courseSoftware from '../capstone_colmar_assets/images/course-software.jpg';
-import courseComputer from '../capstone_colmar_assets/images/course-computer-art.jpg';
-import courseDesign from '../capstone_colmar_assets/images/course-design.jpg';
-import courseData from '../capstone_colmar_assets/images/course-data.jpg';
-import courseBusiness from "../capstone_colmar_assets/images/course-business.jpg";
-import courseMarketing from "../capstone_colmar_assets/images/course-marketing.jpg";
+import Midpic1 from "./MidpicLine1/Midpic1";
+import Midpic2 from "./MidpicLine2/MIdpic2";
+import Midpic3 from "./MidpicLine3/Midpic3";
+import Midpic4 from "./MidpicLine4/Midpic4";
+import Midpic5 from "./MidpicLine5/Midpic5";
+import Midpic6 from "./MIdpicLine6/MIdpic6";
 
 
-const Learn = () => {
-    // const [isHovered, setIsHovered] = useState(false);
-
-    // const handleMouseEnter = () => {
-    //     setIsHovered(true);
-    // };
-
-    // const handleMouseLeave = () => {
-    //     setIsHovered(false);
-    // };
+const Learn = ( {isHovered1, isHovered2, isHovered3, isHovered4, isHovered5, isHovered6}) => {
 
     return (
         <div className="third">
@@ -27,63 +18,15 @@ const Learn = () => {
                 <h1 className="marginup">Start learning</h1>
                 <div className="six-pics">
                     <NavLink to='/contacts' className="special_two">
-                        <div className="midpic-line">                           
-                                <div className="midpic midpic-slave box box1">
-                                    <img className="desktop" src={courseSoftware} alt="soft course" />
-                                    <div className="midpic-text">    
-                                        <h2>Software engineering</h2>
-                                        <p className="midpic-text-p desktop" >COURSES</p>
-                                        <p className="desktop" >Web Development, Mobile Development, iOT, APIs</p>
-                                    </div>
-                                </div>
-                                <div className="bg"></div>
-                                <div className="midpic midpic-slave box box2">
-                                    <img className="desktop" src={courseComputer} alt="comp art" />
-                                    <div className="midpic-text">    
-                                        <h2>Computer art</h2>
-                                        <p className="midpic-text-p desktop" >COURSES</p>
-                                        <p className="desktop" >Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
-                                    </div>
-                                </div>
-                                <div className="bg"></div>
-                                <div className="midpic midpic-slave box box3">
-                                    <img className="desktop" src={courseDesign} alt="design course" />
-                                    <div className="midpic-text">    
-                                        <h2>Design</h2>
-                                        <p className="midpic-text-p desktop" >COURSES</p>
-                                        <p className="desktop" >User Experience Design, User Research, Visual Design</p>
-                                    </div>
-                                </div>
-                                <div className="bg"></div>
+                        <div className="midpic-line">  
+                            <Midpic1 isHovered1={isHovered1} />                         
+                            <Midpic2 isHovered2={isHovered2} />
+                            <Midpic3 isHovered3={isHovered3} />
                         </div>
-                        <div className="midpic-line">                           
-                            <div className="midpic midpic-slave box box1">
-                                <img className="desktop" src={courseData} alt="data course" />
-                                <div className="midpic-text">    
-                                    <h2>Data</h2>
-                                    <p className="midpic-text-p desktop" >COURSES</p>
-                                    <p className="desktop" >Data Science, Big Date, SQL, Data Visualiation</p>
-                                </div>
-                            </div>
-                            <div className="bg"></div>
-                            <div className="midpic midpic-slave box box2">
-                                <img className="desktop" src={courseBusiness} alt="business course" />
-                                <div className="midpic-text">    
-                                    <h2>Business</h2>
-                                    <p className="midpic-text-p desktop" >COURSES</p>
-                                    <p className="desktop" >Product Development, Business Development, Startup</p>
-                                </div>
-                            </div>
-                            <div className="bg"></div>
-                            <div className="midpic midpic-slave box box3">
-                                <img className="desktop" src={courseMarketing} alt="marketing course" />
-                                <div className="midpic-text">    
-                                    <h2>Marketing</h2>
-                                    <p className="midpic-text-p desktop" >COURSES</p>
-                                    <p className="desktop">Analytics, Content Marketing, Mobile marketing</p>
-                                </div>
-                            </div>
-                            <div className="bg"></div>
+                        <div className="midpic-line">                            
+                            <Midpic4 isHovered4={isHovered4} />
+                            <Midpic5 isHovered5={isHovered5} />
+                            <Midpic6 isHovered6={isHovered6} />
                         </div>
                     </NavLink>
                 </div>
