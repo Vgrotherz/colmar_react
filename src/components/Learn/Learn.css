@@ -1,8 +1,6 @@
 .special_two {
     display: flex;
     flex-direction: column;
-    text-decoration: none;
-    color: inherit;
 }
 
 .third {
@@ -12,6 +10,7 @@
     background-color: rgb(223, 219, 219);
     border-top: 0.1mm solid rgb(204, 200, 200);
 }
+
 
 .text-low {
     margin-bottom: 32px;
@@ -56,17 +55,24 @@
     font-size: 2.5vmin;
 }
 
-.hiding_midpic {
+/* reveal the text info */
+.hiding_midpic_hover {
     transition: all 0.5s ease-in;
     transition-property: opacity, height, margin;
-    /* display: block; */
     position: relative;
 }
 
-.hiding_midpic_hover {
+/* normal hiding text */
+.hiding_midpic {
     transition: all 500ms ease-in;
     opacity: 0;
+    margin-bottom: -6rem;
     
+}
+
+/* resize whole block if hovered */
+.hovered_img {
+    width: 110%;
 }
 
 .midpic-text-p {

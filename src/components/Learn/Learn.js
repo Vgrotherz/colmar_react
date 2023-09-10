@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import './Learn.css'
 
 import Midpic1 from "./MidpicLine1/Midpic1";
@@ -17,7 +16,7 @@ const Learn = ( {isHovered1, isHovered2, isHovered3, isHovered4, isHovered5, isH
             <div className="block-three">
                 <h1 className="marginup">Start learning</h1>
                 <div className="six-pics">
-                    <NavLink to='/contacts' className="special_two">
+                    <div className="special_two">
                         <div className="midpic-line">  
                             <Midpic1 isHovered1={isHovered1} />                         
                             <Midpic2 isHovered2={isHovered2} />
@@ -28,7 +27,7 @@ const Learn = ( {isHovered1, isHovered2, isHovered3, isHovered4, isHovered5, isH
                             <Midpic5 isHovered5={isHovered5} />
                             <Midpic6 isHovered6={isHovered6} />
                         </div>
-                    </NavLink>
+                    </div>
                 </div>
             </div>
         </div>

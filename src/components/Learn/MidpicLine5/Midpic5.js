@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import courseBusiness from "../../capstone_colmar_assets/images/course-business.jpg";
 
@@ -13,11 +14,12 @@ const Midpic5 = () => {
         setIsHovered5(false);
     };
 
-    const hidingMidPicHovered5 = !isHovered5? 'hiding_midpic_hover': 'hiding_midpic' ;
+    const hoveredImg= `midpic midpic-slave box box2 nav_link ${ isHovered5? 'hovered_img' : null } `;
+    const hidingMidPicHovered5 = isHovered5? 'hiding_midpic_hover': 'hiding_midpic' ;
 
     return (
         <>
-            <div className="midpic midpic-slave box box2"
+            <NavLink to='/contacts' className={hoveredImg}
                 onMouseEnter={handleMouseEnter5}
                 onMouseLeave={handleMouseLeave5}>
                 <img className="desktop" src={courseBusiness} alt="business course" />
@@ -28,7 +30,7 @@ const Midpic5 = () => {
                         <p className="desktop" >Product Development, Business Development, Startup</p>
                     </div>
                 </div>
-            </div>
+            </NavLink>
             <div className="bg"></div>
         </>
     );

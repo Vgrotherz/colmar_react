@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import banner from '../capstone_colmar_assets/images/banner.jpg';
 
@@ -10,8 +10,10 @@ const StartHere = () => {
     return (
         <>
             <div className="first">
-                <div className="special">    
-                    <img className="images marginall" src={ banner } alt="banner" />
+                <div className="special">
+                    <Link to='/info' className="images marginall">   
+                        <img className="width100" src={ banner } alt="banner" />
+                    </Link> 
                     <div className="text-block one">
                         <h1>Learn something new everyday</h1>
                         <p>Lorem ipsum dolor sit amet,consectur adipiscing elit.</p>

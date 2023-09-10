@@ -24,8 +24,16 @@
 
 .small-picture img {
     margin: 16px;
-    max-width: 35%;
+    /* width: 35%; */
     height: fit-content;
+}
+
+.width47_hovered {
+    width: 47%;
+}
+
+.width35 {
+    width: 35%;
 }
 
 #small-picture-one {
