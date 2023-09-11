@@ -6,3 +6,26 @@
 .width100 {
     width: 100%;
 }
+
+.width47_hovered {
+    /* transition: width 300ms ease; */
+    width: 47%;
+}
+
+.brighten {
+    -webkit-filter: brightness(50%);
+    -webkit-filter: blur(2px);
+    width: 35%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    }
+    
+.brighten_hover {
+    transition: all 1s ease;
+    -webkit-filter: brightness(100%);
+    -webkit-filter: blur(0px);
+    width: 40%;
+}

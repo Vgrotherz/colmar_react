@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./LinkInfo.css";
 
 const LinkInfo = () => {
+    const [ linkA, setLinkA] = useState(false); 
+
+    const mouseEnterLinkA = () => {
+        setLinkA(true);
+    }
+
+    const mouseLeaveLinkA = () => {
+        setLinkA(false);
+    }
+
+    const hoveredLinkA = `lnk link_a` ;
+    
+
+
     return (
         <>
-            <Link to="/learn" className="lnk link_a">
+            <Link to="/learn" 
+            onMouseEnter={mouseEnterLinkA}
+            onMouseLeave={mouseLeaveLinkA} 
+            className={hoveredLinkA}>
                 <span className="mask">
                     <div className="lnk-container">
                         <span className="lnk-title1 title">READ MORE</span>

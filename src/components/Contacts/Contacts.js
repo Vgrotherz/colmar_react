@@ -2,12 +2,13 @@ import React, { useRef, useEffect } from "react";
 
 import './Contacts.css';
 
+import SmallPic1 from "./SmallPics/SmallPic1";
+import SmallPic2 from "./SmallPics/SmallPic2";
+
 import thesisVideo from "../capstone_colmar_assets/videos/thesis.mp4" ;
-import thesisFisma from "../capstone_colmar_assets/images/thesis-fisma.jpg";
-import thesisNow from "../capstone_colmar_assets/images/thesis-now-and-then.jpg";
 
 
-const Contacts = () => {
+const Contacts = ({ smallImgHovered1, smallImgHovered2 }) => {
     const videoRef = useRef(null);
 
     useEffect(() => {
@@ -42,20 +43,8 @@ const Contacts = () => {
                                 </div>
                         {/* <!-- 2 pics aside--> */}
                             <div className="two-pictures desktop">
-                                <div className="small-picture three">
-                                    <img src={thesisFisma} alt="thesis" />
-                                    <div className="small-blocktext">
-                                        <h1>Fisma: Design and Prototype</h1>
-                                        <p>Designer showcase of new prototype product</p>
-                                    </div>
-                                </div>
-                                <div className="small-picture">
-                                    <img src={thesisNow} alt="campus" />
-                                    <div className="small-blocktext">
-                                        <h1>Now and then</h1>
-                                        <p>Research study about New York</p>  
-                                    </div>
-                                </div>
+                                <SmallPic1 smallImgHovered1={smallImgHovered1} />
+                                <SmallPic2 smallImgHovered2={smallImgHovered2} />
                             </div>
                         </div> 
                     </div>             
