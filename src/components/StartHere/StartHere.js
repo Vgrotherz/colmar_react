@@ -4,21 +4,22 @@ import { Link, NavLink } from "react-router-dom";
 import banner from '../capstone_colmar_assets/images/banner.jpg';
 
 import './StartHere.css';
-
+import InfoImg from "./InfoImg/InfoImg";
 
 const StartHere = () => {
     return (
         <>
             <div className="first">
                 <div className="special">
-                    <Link to='/info' className="images marginall">   
+                    {/* <Link to='/info' className="images marginall">   
                         <img className="width100" src={ banner } alt="banner" />
-                    </Link> 
+                    </Link>  */}
+                    <InfoImg />
                     <div className="text-block one">
                         <h1>Learn something new everyday</h1>
-                        <p>Lorem ipsum dolor sit amet,consectur adipiscing elit.</p>
+                        {/* <p>Lorem ipsum dolor sit amet,consectur adipiscing elit.</p> */}
                             <NavLink to='/info' className="wrp link">
-                                <button class="bttn">Start here</button>
+                                <button className="bttn">Start here</button>
                             </NavLink>
                     </div>
                 </div> 

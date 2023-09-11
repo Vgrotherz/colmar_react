@@ -47,7 +47,7 @@
     font-size: 1.6vmin;
 }
 
-.small-blocktext:hover {
+.photo .small-blocktext:hover {
     transition: 200ms;
     background-color: #ffffffc2;
 }
