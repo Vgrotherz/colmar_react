@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 
 import courseComputer from '../../capstone_colmar_assets/images/course-computer-art.jpg';
@@ -15,23 +15,32 @@ const Midpic2 = () => {
     };
 
     const hoveredImg= `midpic midpic-slave box box2 nav_link ${ isHovered2? 'hovered_img' : null } `;
-    const hidingMidPicHovered2 = isHovered2? 'hiding_midpic_hover': 'hiding_midpic' ;
+    const hidingMidPicHovered2 = `nav_link ${isHovered2? 'hiding_midpic_hover': 'hiding_midpic'}` ;
 
+    const navLinkRef = useRef(null)
+
+    const handleClick = () => {
+        if (navLinkRef.current) {
+          navLinkRef.current.click();
+        }
+      }
 
     return (
         <>
-            <NavLink to='/contacts' className={hoveredImg}
+            <div className={hoveredImg}
                 onMouseEnter={handleMouseEnter2}
                 onMouseLeave={handleMouseLeave2}>
-                <img className="desktop" src={courseComputer} alt="comp art" />
+                <img className="desktop point" src={courseComputer} alt="comp art" 
+                onClick={handleClick} />
                 <div className="midpic-text">    
                     <h2>Computer art</h2>
-                    <div className={hidingMidPicHovered2}>
+                    <NavLink to='/contacts' className={hidingMidPicHovered2}
+                    ref={navLinkRef}>
                         <p className="midpic-text-p desktop" >COURSES</p>
                         <p className="desktop" >Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
-                    </div>
+                    </NavLink>
                 </div>
-            </NavLink>
+            </div>
             <div className="bg"></div>
         </>
     );

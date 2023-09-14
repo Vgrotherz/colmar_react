@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 
 import courseDesign from '../../capstone_colmar_assets/images/course-design.jpg';
@@ -15,22 +15,31 @@ const Midpic3 = () => {
     };
 
     const hoveredImg= `midpic midpic-slave box box3 nav_link ${ isHovered3? 'hovered_img' : null } `;
-    const hidingMidPicHovered3 = isHovered3? 'hiding_midpic_hover': 'hiding_midpic' ; 
+    const hidingMidPicHovered3 = `nav_link ${isHovered3? 'hiding_midpic_hover': 'hiding_midpic'}` ; 
+
+    const navLinkRef = useRef(null)
+
+    const handleClick = () => {
+        if (navLinkRef.current) {
+          navLinkRef.current.click();
+        }
+      }
 
     return (
         <>
-            <NavLink to='/contacts' className={hoveredImg}
+            <div className={hoveredImg}
                 onMouseEnter={handleMouseEnter3}
                 onMouseLeave={handleMouseLeave3}>
-                <img className="desktop" src={courseDesign} alt="design course" />
+                <img className="desktop point" src={courseDesign} alt="design course" 
+                onClick={handleClick}/>
                 <div className="midpic-text">    
                     <h2>Design</h2>
-                    <div className={hidingMidPicHovered3}>
+                    <NavLink to='/contacts' className={hidingMidPicHovered3} ref={navLinkRef}>
                         <p className="midpic-text-p desktop" >COURSES</p>
                         <p className="desktop" >User Experience Design, User Research, Visual Design</p>
-                    </div>
+                    </NavLink>
                 </div>
-            </NavLink>
+            </div>
             <div className="bg"></div>
         </>
     );

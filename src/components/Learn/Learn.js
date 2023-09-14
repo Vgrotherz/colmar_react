@@ -9,7 +9,7 @@ import Midpic5 from "./MidpicLine5/Midpic5";
 import Midpic6 from "./MIdpicLine6/MIdpic6";
 
 
-const Learn = ( {isHovered1, isHovered2, isHovered3, isHovered4, isHovered5, isHovered6}) => {
+const Learn = ( {isHovered1, isHovered2, isHovered3, isHovered4, isHovered5, isHovered6 }) => {
 
     return (
         <div className="third">

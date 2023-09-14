@@ -37,6 +37,7 @@
     display: flex;
     flex-direction: column;
     margin: 27px;
+    justify-content: center;
 }
 
 .midpic img {
@@ -45,8 +46,10 @@
 }
 
 .midpic-text {
-    margin: 16px 16px 50px 16px;
+    position: absolute;
+    margin: 100px 16px 50px 16px;
     font-size: 2.5vmin;
+    background-color: inherit;
 }
 
 .midpic-h2 {
@@ -59,7 +62,7 @@
 .hiding_midpic_hover {
     transition: all 0.5s ease-in;
     transition-property: opacity, height, margin;
-    position: relative;
+    /* position: relative; */
 }
 
 /* normal hiding text */
@@ -127,8 +130,8 @@
 }
   
 .box {
-    position: relative;
-    background: #f2f2f2;
+    /* position: relative;
+    background: #f2f2f2; */
     overflow: hidden;
     transition: all 0.5s ease-in;
     z-index: 2;

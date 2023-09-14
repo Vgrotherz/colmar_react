@@ -1,8 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-import banner from '../capstone_colmar_assets/images/banner.jpg';
-
 import './StartHere.css';
 import InfoImg from "./InfoImg/InfoImg";
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 
 import courseData from '../../capstone_colmar_assets/images/course-data.jpg';
@@ -15,22 +15,32 @@ const Midpic4 = () => {
     };
 
     const hoveredImg= `midpic midpic-slave box box1 nav_link ${ isHovered4? 'hovered_img' : null } `;
-    const hidingMidPicHovered4 = isHovered4? 'hiding_midpic_hover': 'hiding_midpic' ;
+    const hidingMidPicHovered4 = `nav_link ${isHovered4? 'hiding_midpic_hover': 'hiding_midpic'}` ;
+
+    const navLinkRef = useRef(null)
+
+    const handleClick = () => {
+        if (navLinkRef.current) {
+          navLinkRef.current.click();
+        }
+      }
     
     return (
         <>
-            <NavLink to='/contacts' className={hoveredImg}
+            <div className={hoveredImg}
                 onMouseEnter={handleMouseEnter4}
                 onMouseLeave={handleMouseLeave4}>
-                <img className="desktop" src={courseData} alt="data course" />
+                <img className="desktop point" src={courseData} alt="data course"
+                onClick={handleClick} />
                 <div className="midpic-text">    
                     <h2>Data</h2>
-                    <div className={hidingMidPicHovered4}>
+                    <NavLink to='/contacts' className={hidingMidPicHovered4}
+                    ref={navLinkRef}>
                         <p className="midpic-text-p desktop" >COURSES</p>
                         <p className="desktop" >Data Science, Big Date, SQL, Data Visualiation</p>
-                    </div>
+                    </NavLink>
                 </div>
-            </NavLink>
+            </div>
             <div className="bg"></div>
         </>
     );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 
 import courseSoftware from '../../capstone_colmar_assets/images/course-software.jpg';
@@ -15,23 +15,33 @@ const Midpic1 = () => {
     };
 
     const hoveredImg= `midpic midpic-slave box box1 nav_link ${ isHovered1? 'hovered_img' : null } `;
-    const hidingMidPicHovered = `${ isHovered1? 'hiding_midpic_hover': 'hiding_midpic' }` ;
+    const hidingMidPicHovered = `nav_link ${ isHovered1? 'hiding_midpic_hover': 'hiding_midpic' }` ;
+
+    const navLinkRef = useRef(null);
+
+    const handleClick = () => {
+        if (navLinkRef.current) {
+          navLinkRef.current.click();
+        }
+      }
 
     return (
         <>
-            <NavLink to='/contacts' className={hoveredImg}
+            <div  className={hoveredImg}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 >
-                <img className="desktop" src={courseSoftware} alt="soft course" />
+                <img className="desktop point" src={courseSoftware} alt="soft course" 
+                onClick={handleClick}
+                />
                 <div className="midpic-text">    
                     <h2>Software engineering</h2>
-                    <div className={hidingMidPicHovered}>
+                    <NavLink to='/contacts' className={hidingMidPicHovered} ref={navLinkRef}>
                         <p className="midpic-text-p desktop" >COURSES</p>
                         <p className="desktop" >Web Development, Mobile Development, iOT, APIs</p>
-                    </div>
+                    </NavLink>
                 </div>
-            </NavLink>
+            </div>
             <div className="bg"></div>
         </>
     );
