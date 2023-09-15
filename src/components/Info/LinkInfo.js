@@ -14,7 +14,7 @@ const LinkInfo = () => {
         setLinkA(false);
     }
 
-    const hoveredLinkA = `lnk link_a` ;
+    const hoveredLinkA = `${ linkA? 'lnk link_a' : 'lnk link_a' }` ;
     
 
 
