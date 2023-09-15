@@ -36,7 +36,11 @@ const Midpic3 = () => {
                     <h2>Design</h2>
                     <NavLink to='/contacts' className={hidingMidPicHovered3} ref={navLinkRef}>
                         <p className="midpic-text-p desktop" >COURSES</p>
-                        <p className="desktop" >User Experience Design, User Research, Visual Design</p>
+                        <p className="desktop" >
+                            User Experience Design, User Research,
+                            <br></br>
+                            Visual Design
+                        </p>
                     </NavLink>
                 </div>
             </div>
