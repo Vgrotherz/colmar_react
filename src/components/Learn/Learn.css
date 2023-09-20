@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
     margin: 27px;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .midpic img {
@@ -51,6 +51,29 @@
     font-size: 2.5vmin;
     background-color: inherit;
 }
+
+
+.midpic-text-p {
+    margin: 8px 0px;
+}
+
+/* handle change of h2 color */
+.midpic-text_h2_nonHovered {
+    transition: 
+        color 0.5s ease-in,
+        text-shadow 0.5s ease-in;
+    color: #4d8ebd;
+    text-shadow: 2px 3px 2px black;
+}
+
+.midpic-text_h2_hovered {
+    transition: 
+        color 0.5s ease-in,
+        text-shadow 0.5s ease-in;
+    color: #f2f2f2;;
+}
+
+
 
 .midpic-h2 {
     display: flex;
@@ -78,70 +101,19 @@
     width: 110%;
 }
 
-.midpic-text-p {
-    margin: 8px 0px;
-}
-
-@media only screen and (max-width:701px ) {
-    .midpic-text {
-        font-size: 2.6vmin;
-        margin: 16px 10px 39px 10px;
-    }
-
-    .midpic-slave {
-        margin: 15px;
-    }
-
-}
-
-@media only screen and (max-width:550px)  {
-    .third {
-        display: block;
-        background-color: transparent;
-        border-bottom: 0.1mm solid rgb(204, 200, 200);
-        padding-bottom: 32px;
-    }
-
-    .six-pics {
-        margin: 16px 16px;
-    }
-
-    .midpic {
-        background-color: rgb(223, 219, 219);
-        margin: 0 0 8px 0;
-    }
-
-    .midpic-line {
-        flex-direction: column;
-    }
-
-    .midpic-slave {
-        margin-left: 0;
-    }
-
-    .block-three h1 {
-        font-size: 11vmin;
-    }
-
-    .midpic-text {
-        font-size: inherit;
-    }
-
-}
-  
 .box {
     /* position: relative;
     background: #f2f2f2; */
     overflow: hidden;
     transition: all 0.5s ease-in;
     z-index: 2;
-    box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);
+    /* box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3); */
 }
   
   
 .box:hover {
     color: #f2f2f2;
-    box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5); */
   }
   
 .bg {
@@ -212,3 +184,50 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
 }
   
+
+@media only screen and (max-width:701px ) {
+    .midpic-text {
+        font-size: 2.6vmin;
+        margin: 16px 10px 39px 10px;
+    }
+
+    .midpic-slave {
+        margin: 15px;
+    }
+
+}
+
+@media only screen and (max-width:550px)  {
+    .third {
+        display: block;
+        background-color: transparent;
+        border-bottom: 0.1mm solid rgb(204, 200, 200);
+        padding-bottom: 32px;
+    }
+
+    .six-pics {
+        margin: 16px 16px;
+    }
+
+    .midpic {
+        background-color: rgb(223, 219, 219);
+        margin: 0 0 8px 0;
+    }
+
+    .midpic-line {
+        flex-direction: column;
+    }
+
+    .midpic-slave {
+        margin-left: 0;
+    }
+
+    .block-three h1 {
+        font-size: 11vmin;
+    }
+
+    .midpic-text {
+        font-size: inherit;
+    }
+
+}

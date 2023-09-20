@@ -14,6 +14,10 @@ const Midpic6 = () => {
         setIsHovered6(false);
     };
 
+    const hoveredImg= `midpic midpic-slave box box3 nav_link ${ isHovered6? 'hovered_img' : null } `;
+    const hidingMidPicHovered6 = `nav_link ${isHovered6? 'hiding_midpic_hover': 'hiding_midpic'}` ;
+    const hoveredText =`${ isHovered6? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } `;
+
     const navLinkRef = useRef(null)
 
     const handleClick = () => {
@@ -22,8 +26,6 @@ const Midpic6 = () => {
         }
       }
 
-    const hoveredImg= `midpic midpic-slave box box3 nav_link ${ isHovered6? 'hovered_img' : null } `;
-    const hidingMidPicHovered6 = `nav_link ${isHovered6? 'hiding_midpic_hover': 'hiding_midpic'}` ;
     return (
         <>
             <div className={hoveredImg}
@@ -32,7 +34,7 @@ const Midpic6 = () => {
                 <img className="desktop point" src={courseMarketing} alt="marketing course" 
                 onClick={handleClick}/>
                 <div className="midpic-text">    
-                    <h2>Marketing</h2>
+                    <h2 className={hoveredText}>Marketing</h2>
                     <NavLink to='/contacts' className={hidingMidPicHovered6} ref={navLinkRef} >
                         <p className="midpic-text-p desktop" >COURSES</p>
                         <p className="desktop">Analytics, Content Marketing, Mobile marketing</p>

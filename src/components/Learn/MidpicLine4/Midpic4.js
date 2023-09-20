@@ -16,6 +16,7 @@ const Midpic4 = () => {
 
     const hoveredImg= `midpic midpic-slave box box1 nav_link ${ isHovered4? 'hovered_img' : null } `;
     const hidingMidPicHovered4 = `nav_link ${isHovered4? 'hiding_midpic_hover': 'hiding_midpic'}` ;
+    const hoveredText =`${ isHovered4? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } `;
 
     const navLinkRef = useRef(null)
 
@@ -33,7 +34,7 @@ const Midpic4 = () => {
                 <img className="desktop point" src={courseData} alt="data course"
                 onClick={handleClick} />
                 <div className="midpic-text">    
-                    <h2>Data</h2>
+                    <h2 className={hoveredText}>Data</h2>
                     <NavLink to='/contacts' className={hidingMidPicHovered4}
                     ref={navLinkRef}>
                         <p className="midpic-text-p desktop" >COURSES</p>

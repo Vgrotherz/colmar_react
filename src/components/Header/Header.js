@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import './Header.css';
@@ -9,43 +9,76 @@ import logoAcademyMob from '../capstone_colmar_assets/images/ic-on-campus.svg';
 import logoOnlineMob from '../capstone_colmar_assets/images/ic-online.svg';
 import logoLogin from '../capstone_colmar_assets/images/ic-login.svg';
 
-
 const Header = () => {
+    const [mobIcon, setMobIcon] = useState(null);
+    
+    const handleClickOn = (divId) => {
+        setMobIcon(divId);
+    }
+
+    // handle mobile styles, when icons visual been clicked
+    const handleMobIconClicked1 = `${(mobIcon === 'img1') ? 'mobile_click_on_45' : 'mobile_click_off_35' }`;
+    const handleMobIconClicked2 = `mobile ${(mobIcon === 'img2') ? 'mobile_click_on' : 'mobile_click_off'}`;
+    const handleMobIconClicked3 = `mobile ${(mobIcon === 'img3') ? 'mobile_click_on' : 'mobile_click_off'}`;
+    const handleMobIconClicked4 = `mobile ${(mobIcon === 'img4') ? 'mobile_click_on' : 'mobile_click_off'}`;
+
     return (
         <div className="header">
-            <div className="logo-name">
-                <Link to='/' className="link logo_academy">
-                    <img src={logoAcademy} alt="Logo of an Academy" />
-                    <p className="desktop">COLMAR<span>ACADEMY</span></p>
+            <div className="logo-name_margin">
+                <div className="logo-name">
+                    <Link to='/info' className="link logo_academy">
+                        <img 
+                        onClick={ () => handleClickOn('img1') } 
+                        className={ handleMobIconClicked1 } 
+                        src={logoAcademy} alt="Logo of an Academy" />
+                    </Link>
+                    <Link className="link">
+                        <p className="desktop">COLMAR<span>ACADEMY</span></p>
+                    </Link>
+                </div>
+                <Link to='/learn'>
+                    <img  
+                    onClick={ () => handleClickOn('img2') } 
+                    className={ handleMobIconClicked2 }
+                    src={logoAcademyMob} alt="campus logo" />
                 </Link>
-                <Link>
-                    <img  className="mobile" src={logoAcademyMob} alt="campus logo" />
-                </Link>
-                <Link>
-                    <img  className="mobile" src={logoOnlineMob} alt="online" />
+                <Link to='/contacts'>
+                    <img  
+                    onClick={ () => handleClickOn('img3') } 
+                    className={ handleMobIconClicked3 } 
+                    src={logoOnlineMob} alt="online" />
                 </Link>
                 <Link to='/404'>
-                    <img className="mobile" src={logoLogin} alt="login" />   
+                    <img 
+                    onClick={ () => handleClickOn('img4') } 
+                    className={ handleMobIconClicked4 } 
+                    src={logoLogin} alt="login" />   
                 </Link>      
             </div>
             <div className="navigation desktop">
                 <ul className="list">
                     <li>
-                        <NavLink to='/info' 
+                        <NavLink to='/info'
+                        onClick={ () => handleClickOn('img1') }
                         className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink' } >
                             On campus
                         </NavLink></li>
                     <li><span>
-                        <NavLink to='/learn' 
+                        <NavLink to='/learn'
+                        onClick={ () => handleClickOn('img2') } 
                         className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink' } >
                             Online
                         </NavLink></span></li>
                     <li><span>
-                        <NavLink to='/contacts' className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink'} >
+                        <NavLink to='/contacts' 
+                        onClick={ () => handleClickOn('img3') }
+                        className={ ({ isActive }) => isActive? 'activeNavLink' : 'inactiveNavLink'} >
                             Contacts
                         </NavLink></span></li>
                     <li><span>
-                        <NavLink to='/404' className='inactiveNavLink' >
+                        <NavLink to='/404' 
+                        onClick={ () => handleClickOn('img4') }
+                        className='inactiveNavLink' >
                         Sign in
                         </NavLink></span></li>
                 </ul>

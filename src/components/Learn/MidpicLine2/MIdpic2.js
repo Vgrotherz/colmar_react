@@ -16,6 +16,7 @@ const Midpic2 = () => {
 
     const hoveredImg= `midpic midpic-slave box box2 nav_link ${ isHovered2? 'hovered_img' : null } `;
     const hidingMidPicHovered2 = `nav_link ${isHovered2? 'hiding_midpic_hover': 'hiding_midpic'}` ;
+    const hoveredText =`${ isHovered2? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } `;
 
     const navLinkRef = useRef(null)
 
@@ -33,7 +34,7 @@ const Midpic2 = () => {
                 <img className="desktop point" src={courseComputer} alt="comp art" 
                 onClick={handleClick} />
                 <div className="midpic-text">    
-                    <h2>Computer art</h2>
+                    <h2 className={hoveredText}>Computer art</h2>
                     <NavLink to='/contacts' className={hidingMidPicHovered2}
                     ref={navLinkRef}>
                         <p className="midpic-text-p desktop" >COURSES</p>
