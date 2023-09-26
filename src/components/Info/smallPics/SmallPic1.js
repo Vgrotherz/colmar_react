@@ -17,7 +17,7 @@ const SmallPic1 = () => {
         setImgHovered1(false);
     };
 
-    const hoveredSmallImg1 = `desktop glow_img ${ smallImgHovered1? 'width47_hovered' : 'width35' }`;
+    const hoveredSmallImg1 = `desktop_info glow_img ${ smallImgHovered1? 'width47_hovered' : 'width35' }`;
 
     return (
         <>
@@ -25,7 +25,7 @@ const SmallPic1 = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}>
                 <img id="small-picture-one" className={hoveredSmallImg1} src={infoOrientation} alt="info" />
-                <img className="mobile" src={infoOrientationMob} alt="info" />
+                <img className="mobile_info" src={infoOrientationMob} alt="info" />
                 <div className="small-blocktext">
                     <h1>Orientation date</h1>
                     <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>

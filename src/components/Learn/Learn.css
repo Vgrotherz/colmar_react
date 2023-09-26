@@ -47,9 +47,9 @@
 
 .midpic-text {
     position: absolute;
-    margin: 100px 16px 50px 16px;
-    font-size: 2.5vmin;
+    margin: 50px 16px 50px 16px;
     background-color: inherit;
+    font-size: 1.6vw;
 }
 
 
@@ -101,40 +101,46 @@
     width: 110%;
 }
 
-.box {
-    /* position: relative;
-    background: #f2f2f2; */
-    overflow: hidden;
-    transition: all 0.5s ease-in;
-    z-index: 2;
-    /* box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3); */
-}
-  
-  
-.box:hover {
-    color: #f2f2f2;
-    /* box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5); */
-  }
-  
-.bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.5s ease-in;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-  
-.box.box1:hover, 
-.box.box2:hover,
-.box.box3:hover  {
-    background-color: rgba(0, 0, 0, 0.651); 
-}
+@media only screen and (min-width:426px) {
 
+    .mob_img_hide {
+        display: none;
+    }
+
+    .box {
+        position: relative;
+        /* background: #f2f2f2; */
+        overflow: hidden;
+        transition: all 0.5s ease-in;
+        z-index: 2;
+        /* box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3); */
+    }
+    
+    
+    .box:hover {
+        color: #f2f2f2;
+        /* box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5); */
+    }
+    
+    .bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.5s ease-in;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .box.box1:hover, 
+    .box.box2:hover,
+    .box.box3:hover  {
+        background-color: rgba(0, 0, 0, 0.651); 
+    }
+}
 
 .box.box1:hover~.bg {
     opacity: 1;
@@ -184,10 +190,23 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
 }
   
+@media only screen and (min-width:701px) and (max-width:1300px) {
+    .midpic-text {
+    font-size: 1.5vw;
+    }
+}
+
+@media only screen and (min-width:702px) and (max-width:1000px) {
+    .midpic-text {
+        margin: 20px 16px 50px 16px;
+    }
+    
+}
+
 
 @media only screen and (max-width:701px ) {
     .midpic-text {
-        font-size: 2.6vmin;
+        font-size: 2.0vw;
         margin: 16px 10px 39px 10px;
     }
 
@@ -195,6 +214,9 @@
         margin: 15px;
     }
 
+    .midpic-line {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width:550px)  {
@@ -214,10 +236,6 @@
         margin: 0 0 8px 0;
     }
 
-    .midpic-line {
-        flex-direction: column;
-    }
-
     .midpic-slave {
         margin-left: 0;
     }
@@ -228,6 +246,31 @@
 
     .midpic-text {
         font-size: inherit;
+    }
+
+}
+
+@media only screen and (max-width:426px) {
+    .midpic-text {
+        position: relative;
+        margin: 16px;
+    }
+
+    .display_block {
+        display: block;
+    }
+    
+    .hiding_midpic_click {
+        margin-bottom: 0;
+        opacity: 1;
+    }
+
+    .midpic-text_h2_nonHovered {
+        text-shadow: 1px 1px 0px black;
+    }
+
+    .mobile_h2 {
+        margin-bottom: 1.5rem;
     }
 
 }

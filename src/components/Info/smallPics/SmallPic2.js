@@ -16,7 +16,7 @@ const SmallPic2 = () => {
         setImgHovered2(false);
     };
 
-    const hoveredSmallImg2 = `desktop glow_img ${ smallImgHovered2? 'width47_hovered' : 'width35' }`;
+    const hoveredSmallImg2 = `desktop_info glow_img ${ smallImgHovered2? 'width47_hovered' : 'width35' }`;
 
     return (
         <>
@@ -24,7 +24,7 @@ const SmallPic2 = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}>
                 <img className={hoveredSmallImg2} src={infoCampus} alt="campus" />
-                <img className="mobile" src={infoCampusMob} alt="campus" />
+                <img className="mobile_info" src={infoCampusMob} alt="campus" />
                 <div className="small-blocktext">
                     <h1>Our campus</h1>
                     <p>Find which campus is close by you</p>

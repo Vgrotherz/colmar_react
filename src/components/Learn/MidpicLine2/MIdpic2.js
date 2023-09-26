@@ -5,6 +5,13 @@ import courseComputer from '../../capstone_colmar_assets/images/course-computer-
 
 const Midpic2 = () => {
     const [ isHovered2, setIsHovered2 ] = useState(false);
+    const [ isClickedMob2, setIsClickedMob2 ] = useState(false);
+
+    const handleClickMObile = () => {
+        if(window.innerWidth <= 425) {
+            setIsClickedMob2(!isClickedMob2);
+        }
+    } 
 
     const handleMouseEnter2 = () => {
         setIsHovered2(true);
@@ -14,13 +21,14 @@ const Midpic2 = () => {
         setIsHovered2(false);
     };
 
-    const hoveredImg= `midpic midpic-slave box box2 nav_link ${ isHovered2? 'hovered_img' : null } `;
-    const hidingMidPicHovered2 = `nav_link ${isHovered2? 'hiding_midpic_hover': 'hiding_midpic'}` ;
-    const hoveredText =`${ isHovered2? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } `;
+    const hoveredImg = `midpic midpic-slave box box1 nav_link ${ isHovered2 && window.innerWidth > 425? 'hovered_img' : null } `;
+    const mobileImgClicks = `mob_img_hide ${isClickedMob2? '' : 'desktop' }`;
+    const hidingMidPicHovered2 = `nav_link  ${ isHovered2 && window.innerWidth > 425? 'hiding_midpic_hover': 'hiding_midpic' } ${isClickedMob2? 'hiding_midpic_click' : 'desktop' }` ;
+    const hoveredText =`${ isHovered2 && window.innerWidth > 425? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } ${isClickedMob2? 'mobile_h2' : '' }`;
 
     const navLinkRef = useRef(null)
 
-    const handleClick = () => {
+    const handleClickLink = () => {
         if (navLinkRef.current) {
           navLinkRef.current.click();
         }
@@ -28,17 +36,24 @@ const Midpic2 = () => {
 
     return (
         <>
-            <div className={hoveredImg}
+            <div 
+                className={hoveredImg}
                 onMouseEnter={handleMouseEnter2}
-                onMouseLeave={handleMouseLeave2}>
+                onMouseLeave={handleMouseLeave2}
+                onClick={handleClickMObile}
+                >
                 <img className="desktop point" src={courseComputer} alt="comp art" 
-                onClick={handleClick} />
+                onClick={handleClickMObile} 
+                />
                 <div className="midpic-text">    
                     <h2 className={hoveredText}>Computer art</h2>
+                    <img className={mobileImgClicks} src={courseComputer} alt="soft course" 
+                    onClick={handleClickLink}
+                    />
                     <NavLink to='/contacts' className={hidingMidPicHovered2}
                     ref={navLinkRef}>
-                        <p className="midpic-text-p desktop" >COURSES</p>
-                        <p className="desktop" >
+                        <p className="midpic-text-p" >COURSES</p>
+                        <p className="" >
                             Imaging & Design, Web Design,
                             <br></br>
                             Motion Graphics & Visual Effects,

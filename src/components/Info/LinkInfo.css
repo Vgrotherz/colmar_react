@@ -107,3 +107,10 @@
   .lnk:hover .icn:nth-child(2) {
     transform: translate(0px);
   }
+
+  @media only screen and (max-width:701px) {
+    .link_a {
+      background: none;
+    }
+    
+  }

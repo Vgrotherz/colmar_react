@@ -17,7 +17,7 @@ const SmallPic3 = () => {
         setImgHovered3(false);
     };
 
-    const hoveredSmallImg3 = `desktop glow_img ${ smallImgHovered3? 'width47_hovered' : 'width35' }`;
+    const hoveredSmallImg3 = `desktop_info glow_img ${ smallImgHovered3? 'width47_hovered' : 'width35' }`;
 
     return (
         <>
@@ -25,7 +25,7 @@ const SmallPic3 = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}>
                 <img className={hoveredSmallImg3} src={infoGuest} alt="guest" />
-                <img className="mobile" src={infoGuestMob} alt="guest" />
+                <img className="mobile_info" src={infoGuestMob} alt="guest" />
                 <div className="small-blocktext">
                     <h1>Our guest lecture</h1>
                     <p>Join a keynote with Oliver Sack about<br></br> music in medical treatment</p>

@@ -5,6 +5,13 @@ import courseMarketing from "../../capstone_colmar_assets/images/course-marketin
 
 const Midpic6 = () => {
     const [ isHovered6, setIsHovered6 ] = useState(false);
+    const [ isClickedMob6, setIsClickedMob6 ] = useState(false);
+
+    const handleClickMObile = () => {
+        if(window.innerWidth <= 425) {
+            setIsClickedMob6(!isClickedMob6);
+        }
+    } 
 
     const handleMouseEnter6 = () => {
         setIsHovered6(true);
@@ -14,13 +21,14 @@ const Midpic6 = () => {
         setIsHovered6(false);
     };
 
-    const hoveredImg= `midpic midpic-slave box box3 nav_link ${ isHovered6? 'hovered_img' : null } `;
-    const hidingMidPicHovered6 = `nav_link ${isHovered6? 'hiding_midpic_hover': 'hiding_midpic'}` ;
-    const hoveredText =`${ isHovered6? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } `;
+    const hoveredImg = `midpic midpic-slave box box1 nav_link ${ isHovered6 && window.innerWidth > 425? 'hovered_img' : null } `;
+    const mobileImgClicks = `mob_img_hide ${isClickedMob6? '' : 'desktop' }`;
+    const hidingMidPicHovered6 = `nav_link  ${ isHovered6 && window.innerWidth > 425? 'hiding_midpic_hover': 'hiding_midpic' } ${isClickedMob6? 'hiding_midpic_click' : 'desktop' }` ;
+    const hoveredText =`${ isHovered6 && window.innerWidth > 425? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } ${isClickedMob6? 'mobile_h2' : '' }`;
 
     const navLinkRef = useRef(null)
 
-    const handleClick = () => {
+    const handleClickLink = () => {
         if (navLinkRef.current) {
           navLinkRef.current.click();
         }
@@ -28,16 +36,23 @@ const Midpic6 = () => {
 
     return (
         <>
-            <div className={hoveredImg}
+            <div 
+                className={hoveredImg}
                 onMouseEnter={handleMouseEnter6}
-                onMouseLeave={handleMouseLeave6}>
+                onMouseLeave={handleMouseLeave6}
+                onClick={handleClickMObile}
+                >
                 <img className="desktop point" src={courseMarketing} alt="marketing course" 
-                onClick={handleClick}/>
+                onClick={handleClickLink}
+                />
                 <div className="midpic-text">    
                     <h2 className={hoveredText}>Marketing</h2>
+                    <img className={mobileImgClicks} src={courseMarketing} alt="soft course" 
+                    onClick={handleClickLink}
+                    />
                     <NavLink to='/contacts' className={hidingMidPicHovered6} ref={navLinkRef} >
-                        <p className="midpic-text-p desktop" >COURSES</p>
-                        <p className="desktop">Analytics, Content Marketing, Mobile marketing</p>
+                        <p className="midpic-text-p" >COURSES</p>
+                        <p className="">Analytics, Content Marketing, Mobile marketing</p>
                     </NavLink>
                 </div>
             </div>
