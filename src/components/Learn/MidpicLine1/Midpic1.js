@@ -26,6 +26,7 @@ const Midpic1 = () => {
     const hidingMidPicHovered = `nav_link  ${ isHovered1 && window.innerWidth > 425? 'hiding_midpic_hover': 'hiding_midpic' } ${isClickedMob1? 'hiding_midpic_click' : 'desktop' }` ;
     const hoveredText =`${ isHovered1 && window.innerWidth > 425? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } ${isClickedMob1? 'mobile_h2' : '' }`;
 
+    // handle links to a NavLink when clicks on an Img
     const navLinkRef = useRef(null);
 
     const handleClickLink = () => {
