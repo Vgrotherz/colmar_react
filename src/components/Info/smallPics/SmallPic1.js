@@ -22,8 +22,9 @@ const SmallPic1 = () => {
     return (
         <>
             <Link to='/learn' className="small-picture photo"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}>
+                onMouseEnter={ handleMouseEnter }
+                onMouseLeave={ handleMouseLeave }
+                >
                 <img id="small-picture-one" className={hoveredSmallImg1} src={infoOrientation} alt="info" />
                 <img className="mobile_info" src={infoOrientationMob} alt="info" />
                 <div className="small-blocktext">
