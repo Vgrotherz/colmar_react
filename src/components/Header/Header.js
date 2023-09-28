@@ -5,8 +5,8 @@ import './Header.css';
 import './Reset.css';
 
 // imgs
-import logoAcademy from '../capstone_colmar_assets/images/ic-logo.svg';
-import logoAcademyMob from '../capstone_colmar_assets/images/ic-on-campus.svg';
+import logoAcademyMob from '../capstone_colmar_assets/images/ic-logo.svg';
+import logoCampusMob from '../capstone_colmar_assets/images/ic-on-campus.svg';
 import logoOnlineMob from '../capstone_colmar_assets/images/ic-online.svg';
 import logoLogin from '../capstone_colmar_assets/images/ic-login.svg';
 
@@ -16,7 +16,6 @@ const Header = () => {
     const handleClickOn = (divId) => {
         setMobIcon(divId);
     }
-
 
     // handle mobile styles, when icons visual been clicked
     const handleMobIconClicked1 = `${(mobIcon === 'img1') ? 'mobile_click_on_45' : 'mobile_click_off_35' }`;
@@ -32,27 +31,27 @@ const Header = () => {
                         <img 
                         onClick={ () => handleClickOn('img1')} 
                         className={ handleMobIconClicked1 } 
-                        src={logoAcademy} alt="Logo of an Academy" />
+                        src={logoAcademyMob} alt="Logo of an Academy" />
                     </Link>
                     <Link className="link">
                         <p className="desktop">COLMAR<span>ACADEMY</span></p>
                     </Link>
                 </div>
-                <Link to='/learn'>
+                <Link to='/learn' onClick={ () => handleClickOn('img2') }>
                     <img  
-                    onClick={ () => handleClickOn('img2') } 
+                     
                     className={ handleMobIconClicked2('img2') }
-                    src={logoAcademyMob} alt="campus logo" />
+                    src={logoCampusMob} alt="campus logo" />
                 </Link>
-                <Link to='/contacts'>
+                <Link to='/contacts' onClick={ () => handleClickOn('img3') }>
                     <img  
-                    onClick={ () => handleClickOn('img3') } 
+                     
                     className={ handleMobIconClicked2('img3') } 
                     src={logoOnlineMob} alt="online" />
                 </Link>
-                <Link to='/404'>
+                <Link to='/404' onClick={ () => handleClickOn('img4') } >
                     <img 
-                    onClick={ () => handleClickOn('img4') } 
+                    
                     className={ handleMobIconClicked2('img4') } 
                     src={logoLogin} alt="login" />   
                 </Link>      
