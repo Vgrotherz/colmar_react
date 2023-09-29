@@ -80,7 +80,6 @@
 
 
 .wrp {
-    /* height: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +95,6 @@
     font-weight: 700;
     color: #313133;
     background: #4FD1C5;
-    /* background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%); */
     background: linear-gradient(90deg, rgb(62 97 91) 0%, rgb(70 217 203) 100%);
     border: none;
     border-radius: 1000px;
@@ -113,7 +111,6 @@
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
-    /* border: 6px solid #00FFCB; */
     border: 6px solid #57e1d3c7;
     box-shadow: 0 0 60px rgba(0,255,203,.64);
     position: absolute;
@@ -139,7 +136,6 @@
     border-radius: 100%;
     border: 6px solid #00FFCB;
     position: absolute;
-    /* z-index: -1; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

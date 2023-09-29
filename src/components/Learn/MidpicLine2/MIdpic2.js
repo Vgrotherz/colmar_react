@@ -29,12 +29,10 @@ const Midpic2 = () => {
     const hoveredImg = `midpic midpic-slave box box1 nav_link ${ isHovered2 && window.innerWidth > 768? 'hovered_img' : null } `;
     const hidingMidPicHovered2 = `nav_link  
         ${ isHovered2 && window.innerWidth > 768? 'hiding_midpic_hover': 'hiding_midpic' } 
-        ${ isClickedMob2? 'hiding_midpic_click' : 'desktop' }
-        `;
+        ${ isClickedMob2? 'hiding_midpic_click' : 'desktop' } `;
     const hoveredText =`
         ${ isHovered2 && window.innerWidth > 768? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } 
-        ${ isClickedMob2 && window.innerWidth < 425? 'mobile_h2' : '' }
-        `;
+        ${ isClickedMob2 && window.innerWidth < 425? 'mobile_h2' : '' } `;
 
     // tablet view 425px-768px
     const tabletClicks = `midpic-text ${ isClickedTabl2 && window.innerWidth < 768 && window.innerWidth > 425? 'tablet_click_on' : ''}`;
@@ -60,17 +58,14 @@ const Midpic2 = () => {
                 onClick={handleClickMObile}
                 >
                 <img className="desktop point" src={courseComputer} alt="comp art" 
-                onClick={handleClickMObile} 
-                />
+                onClick={handleClickMObile} />
                 <div className={tabletClicks}>    
                     <h2 className={hoveredText}>Computer art</h2>
                     <img className={mobileImgClicks} src={courseComputer} alt="soft course" 
-                    onClick={handleClickLink}
-                    />
-                    <NavLink to='/contacts' className={hidingMidPicHovered2}
-                    ref={navLinkRef}>
+                    onClick={handleClickLink} />
+                    <NavLink to='/contacts' className={hidingMidPicHovered2} ref={navLinkRef}>
                         <p className="midpic-text-p" >COURSES</p>
-                        <p className="" >
+                        <p>
                             Imaging & Design, Web Design,
                             <br></br>
                             Motion Graphics & Visual Effects,

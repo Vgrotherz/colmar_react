@@ -24,7 +24,6 @@
 
 .small-picture img {
     margin: 16px;
-    /* width: 35%; */
     height: fit-content;
 }
 
@@ -160,7 +159,6 @@
 
     .small-picture {
         flex-direction: column;
-        /* border: 0; */
     }
 
     .small-picture img {

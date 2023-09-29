@@ -29,11 +29,10 @@ const Midpic1 = () => {
     const hoveredImg = `midpic midpic-slave box box1 nav_link ${ isHovered1 && window.innerWidth > 768? 'hovered_img' : null } `;
     const hidingMidPicHovered = `nav_link  
             ${ isHovered1 && window.innerWidth > 768? 'hiding_midpic_hover': 'hiding_midpic' } 
-            ${ isClickedMob1? 'hiding_midpic_click' : 'desktop' }`;
+            ${ isClickedMob1? 'hiding_midpic_click' : 'desktop' } `;
     const hoveredText =`
         ${ isHovered1 && window.innerWidth > 768? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } 
-        ${ isClickedMob1 && window.innerWidth < 425 ? 'mobile_h2' : '' }
-         `;
+        ${ isClickedMob1 && window.innerWidth < 425 ? 'mobile_h2' : '' } `;
 
     // tablet view 425px-768px
     const tabletClicks = `midpic-text ${ isClickedTabl1 && window.innerWidth < 768 && window.innerWidth > 425? 'tablet_click_on' : ''}`
@@ -64,11 +63,10 @@ const Midpic1 = () => {
                 <div className={tabletClicks}>    
                     <h2 className={hoveredText} onClick={handleClickMObile} >Software engineering</h2>
                     <img className={mobileImgClicks} src={courseSoftware} alt="soft course" 
-                    onClick={handleClickLink}
-                    />
+                    onClick={handleClickLink} />
                     <NavLink to='/contacts' className={hidingMidPicHovered} ref={navLinkRef}>
-                        <p className="midpic-text-p" >COURSES</p>
-                        <p className="" >
+                        <p className="midpic-text-p">COURSES</p>
+                        <p>
                             Web Development, Mobile Development,
                             <br></br>
                             iOT, APIs

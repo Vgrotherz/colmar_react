@@ -9,7 +9,6 @@
 }
 
 .width47_hovered {
-    /* transition: width 300ms ease; */
     width: 47%;
 }
 
@@ -99,8 +98,6 @@
     height: -webkit-fill-available;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
 .grid figure figcaption > a {
 	font-size: 0;
 }

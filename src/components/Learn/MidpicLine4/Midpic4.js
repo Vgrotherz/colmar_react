@@ -30,10 +30,10 @@ const Midpic4 = () => {
     const hoveredImg = `midpic midpic-slave box box1 nav_link ${ isHovered4 && window.innerWidth > 768? 'hovered_img' : null } `;
     const hidingMidPicHovered4 = `nav_link  
         ${ isHovered4 && window.innerWidth > 768? 'hiding_midpic_hover': 'hiding_midpic' } 
-        ${ isClickedMob4? 'hiding_midpic_click' : 'desktop' }`;
+        ${ isClickedMob4? 'hiding_midpic_click' : 'desktop' } `;
     const hoveredText =`
         ${ isHovered4 && window.innerWidth > 768? 'midpic-text_h2_hovered' : 'midpic-text_h2_nonHovered' } 
-        ${ isClickedMob4 && window.innerWidth < 425 ? 'mobile_h2' : '' }`;
+        ${ isClickedMob4 && window.innerWidth < 425 ? 'mobile_h2' : '' } `;
 
     // tablet view 425px-768px
     const tabletClicks = `midpic-text ${ isClickedTabl4 && window.innerWidth < 768 && window.innerWidth > 425? 'tablet_click_on' : ''}`
@@ -59,17 +59,14 @@ const Midpic4 = () => {
                 onClick={handleClickMObile}
                 >
                 <img className="desktop point" src={courseData} alt="data course"
-                onClick={handleClickLink} 
-                />
+                onClick={handleClickLink} />
                 <div className={tabletClicks}>    
                     <h2 className={hoveredText}>Data</h2>
                     <img className={mobileImgClicks} src={courseData} alt="soft course" 
-                    onClick={handleClickLink}
-                    />
-                    <NavLink to='/contacts' className={hidingMidPicHovered4}
-                    ref={navLinkRef}>
+                    onClick={handleClickLink} />
+                    <NavLink to='/contacts' className={hidingMidPicHovered4} ref={navLinkRef}>
                         <p className="midpic-text-p" >COURSES</p>
-                        <p className="" >Data Science, Big Date, SQL, Data Visualiation</p>
+                        <p>Data Science, Big Date, SQL, Data Visualiation</p>
                     </NavLink>
                 </div>
             </div>

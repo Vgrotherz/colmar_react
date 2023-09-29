@@ -34,13 +34,8 @@ figure.effect-chico h1 {
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-chico h2 {
-	/* padding: 20% 0 20px 0; */
-}
-
 figure.effect-chico h1 {
 	margin: 0 auto;
-	/* max-width: 200px; */
 	-webkit-transform: scale(1.5);
 	transform: scale(1.5);
 }

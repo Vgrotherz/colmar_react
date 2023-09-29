@@ -58,16 +58,14 @@ const Midpic5 = () => {
                 onClick={handleClickMObile}
                 >
                 <img className="desktop point" src={courseBusiness} alt="business course" 
-                onClick={handleClickLink} 
-                />
+                onClick={handleClickLink} />
                 <div className={tabletClicks}>    
                     <h2 className={hoveredText}>Business</h2>
                     <img className={mobileImgClicks} src={courseBusiness} alt="soft course" 
-                    onClick={handleClickLink}
-                    />
+                    onClick={handleClickLink} />
                     <NavLink to='/contacts' className={hidingMidPicHovered5} ref={navLinkRef}> 
                         <p className="midpic-text-p" >COURSES</p>
-                        <p className="" >
+                        <p>
                             Product Development, Business Development,
                             <br></br> 
                             Startup

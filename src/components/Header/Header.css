@@ -92,7 +92,6 @@
     }
 
     .logo-name_margin {
-        /* display: flex; */
         display: contents;
         justify-content: space-around;
         align-items: baseline;
@@ -101,7 +100,6 @@
 
     .mobile_click_on {
         width: 50px;
-        /* background-color: yellow; */
         border-radius: 15px;
     }
 
@@ -117,17 +115,11 @@
         width: 45px;
     }
 
-    .logo-name {
-        display: contents;
-    }
-
     .logo-name img {
         margin: 0 ;
     }
 
     .header {
-        /* display: flex;
-        justify-content: center; */
         margin: 0 10px;
     }
 }
@@ -142,10 +134,6 @@
     }
 
     /* logo and nav */
-
-    .logo-name {
-        display: contents;
-    }
 
     .logo-name img {
         margin: 0 ;
